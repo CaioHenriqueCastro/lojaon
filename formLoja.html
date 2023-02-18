@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2><center>Formulários HTML</center></h2>
+
+	<form>
+		<p>
+			<label for="l_nome">Nome:</label>
+			<input type="text" name="nome" id="nome"
+			 size="50" maxlength="40" 
+			 placeholder="Digite o nome completo" required>
+		</p>
+
+		<p>
+			<label for="l_senha">Senha:</label>
+			<input type="password" name="senha" id="senha"
+			 size="50" maxlength="10" minlength="4"
+			 placeholder="**********">
+		</p>
+
+		<p>
+			<label for="l_email">E-mail:</label>
+			<input type="email" name="email" id="email"
+			 size="50" maxlength="100" 
+			 placeholder="Digite seu e-mail, exemplo: email@provedor.com">
+		</p>
+
+		<p>
+			<label for="l_datanascimento">Data de Nascimento:</label>
+			<input type="date" name="datanascimento" id="datanascimento">
+		</p>
+
+		<p>
+			<label for="l_conhecimento">Conhecimento em HTML:</label>
+			Básico
+				<input type="range" name="conhecimento" id="conhecimento"
+			     min="0" max="10" step="5"
+			     value="0"
+			     oninput="resultado.value=conhecimento.value">
+			Avançado - - - - - - -
+			<output id="resultado">0</output>
+		</p>
+
+		<p>
+			<label for="l_horario">Duração da Aula:</label>
+			<input type="time" name="tempo" id="tempo" step="0">
+		</p>
+
+		<p>
+			<label for="l_horarioaula">Horário da Aula:</label>
+			<input type="time" name="inicio" id="inicio">
+			
+			<label for="l_ate">Até</label>
+			<input type="time" name="fim" id="fim">
+		</p>
+
+		<p>
+			<label for="l_sexo">Sexo:</label>
+
+			<input type="radio" name="sexo" id="sexo" value="F" required>
+				<label for="l_feminino">Feminino</label>
+
+			<input type="radio" name="sexo" id="sexo" value="M">
+				<label for="l_masculino">Masculino</label>
+		</p>
+
+		<p>
+			<label for="l_esporte">Pratica qual esporte?</label>
+
+			<input type="checkbox" name="basquete" id="basquete"
+			 value="basquete">
+			 	<label for="l_basquete">Basquete</label>
+
+			<input type="checkbox" name="futebol" id="futebol"
+			 value="futebol">
+			 	<label for="l_futebol">Futebol</label>
+
+			<input type="checkbox" name="volei" id="volei"
+			 value="volei">
+			 	<label for="l_volei">Vôlei</label>
+
+			<input type="checkbox" name="natacao" id="natacao"
+			 value="natacao">
+			 	<label for="l_natacao">Natação</label>
+		</p>
+
+		<p>
+			<label for="l_escolaridade">Escolaridade:</label>
+			<select name="escolaridade" id="escolaridade">
+				<option value="ensino_medio">Ensino Médio</option>
+				<option value="ensino_tecnico">Ensino Técnico</option>
+				<option value="graduacao">Graduação</option>
+				<option value="especializacao">Especialização</option>
+				<option value="mestrado">Mestrado</option>
+				<option value="doutorado">Doutorado</option>
+			</select>
+		</p>
+
+		<p>
+			<label for="l_navegador">Qual seu navegador preferido?</label>
+			<input list="op_navegadores" name="navegadores" id="navegadores">
+			<datalist id="op_navegadores">
+				<option value="Firefox">
+				<option value="Chrome">
+				<option value="Opera">
+				<option value="Safari">
+			</datalist>
+		</p>
+
+		<p>
+			<label for="l_exame">Horário do Exame:</label>
+			<input list="op_horarios" type="time" name="horarios" id="horarios">
+			<datalist id="op_horarios">
+				<option value="19:00">
+				<option value="20:00">
+				<option value="21:00">
+			</datalist>
+		</p>
+
+		<p>
+			<label for="l_observacao">Observação:</label>
+			<br>
+			<textarea name="observacao" id="observacao" 
+			          cols="50" rows="5" 
+			          placeholder="Digite alguma observação..."></textarea>
+		</p>
+
+		<p>
+			<label for="l_temperatura">Temperatura Cº</label>
+			<input type="number" name="temperatura" id="temperatura"
+			       min="-10" max="50" step="2">
+		</p>
+
+
+		<p>
+			<button type="reset" name="limpar" id="limpar">Limpar Tela</button>
+
+			<button type="button" onclick="alert('Estamos ficando craques no HTML !!!')" 
+			        name="finalizar" id="finalizar">Finalizar</button>
+
+			<button type="submit" name="enviar_dados" id="enviar_dados">Enviar Dados ao Servidor/Banco de Dados
+			</button>
+		</p>
+
+	</form>
+
+</body>
+</html>
